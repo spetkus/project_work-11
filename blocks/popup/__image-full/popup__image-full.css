@@ -1,0 +1,6 @@
+.popup__image-full {
+    max-width: 100%;
+    max-height: 80vh;
+    display: block;
+}
+
