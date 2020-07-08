@@ -1,4 +1,4 @@
-class UserInfo {
+export default class UserInfo {
   constructor({ avatarElement, usernameElement, aboutElement }) {
     this.avatarElement = avatarElement;
     this.usernameElement = usernameElement;

@@ -1,4 +1,4 @@
-class Card {
+export default class Card {
 
   constructor(cardData, api, userId, zoomUrl) {
     this.name = cardData.name;
@@ -56,10 +56,6 @@ class Card {
   }
 
   like = () => {
-    // Можно лучше
-    // Сейчас вы храните данные о лайке вне класса карточки -- в элементе DOM
-    // Удобнее и логичнее завести переменную в классе, которая будет за состояние лайка отвечать
-    //  данные будут инкапсулированы и не надо будет для проверки DOM беспокоить
     const likeSet = (this.likeIcon.classList.contains("place-card__like-icon_liked")) ? true : false;
     this._api.likeCard(this.cardId, likeSet)
       .then((content) => {
