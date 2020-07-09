@@ -1,8 +1,8 @@
 {
   "name": "project_work-11",
   "version": "0.0.1",
-  "description": "Version: **0.0.1**",
-  "main": "index.js",
+  "description": "Study Front-end project (Mesto)",
+  "main": "src/js/index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production rimraf dist && webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/spetkus/project_work-11/issues"
   },
-  "homepage": "https://github.com/spetkus/project_work-11#readme",
+  "homepage": "https://github.com/spetkus/project_work-11/",
   "devDependencies": {
     "@babel/cli": "^7.10.4",
     "@babel/core": "^7.10.4",
