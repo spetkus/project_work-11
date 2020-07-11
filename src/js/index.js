@@ -1,3 +1,13 @@
+import "../pages/style.css";
+
+import Api from './api.js'
+import Card from "./card.js";
+import CardList from "./cardlist.js";
+import Popup from "./popup.js";
+import PopupForm from './popupForm.js'
+import FormValidator from './formvalidator.js';
+import UserInfo from './userinfo.js';
+
 (function () {
 
 
@@ -22,12 +32,14 @@
   const formEditProfile = document.forms.edit;
   const formEditProfileAvatar = document.forms.editavatar;
 
+  const serverConnection = NODE_ENV === 'development' ? 'http' : 'https';
+
 
 
   /*  ИНИЦИАЛИЗАЦИЯ API */
 
   const api = new Api({
-    baseUrl: 'https://praktikum.tk/cohort11',
+    baseUrl: `${serverConnection}://praktikum.tk/cohort11`,
     headers: {
       authorization: 'd409416e-f3a9-4123-ae57-e43bb97b78e9',
       'Content-Type': 'application/json'
@@ -196,37 +208,3 @@
 
 
 })();
-
-// Добрый день!
-
-// Хорошая работа и очень классная работа над замечаниями!
-
-// ## Итог
-
-// - класс Api реализован согласно поставленной задаче
-// - информация о пользователе  (имя, подпись и аватар) подгружаются с сервера (GET запрос)
-// - имя и о себе можно отредактировать (отправляется PATCH запрос, новые данные)
-// - карточки подгружаются с сервера (GET запрос)
-// - обязательный функционал работает без багов
-// - корректная работа с асинхронным кодом
-// - DOM изменяется только после того, как запрос успешно выполнен
-// - ошибки сервера обрабатываются
-// - сделаны дополнительные задания!!!
-
-// Работа принята!
-
-// ## Можно лучше
-
-// Большое количество параметров лучше передвать в метод или в конструктор через деструктуризацию.
-
-// Например в коде:
-// ~~~
-// const newClass = new Class({ windowOne, userForm, popupObj })
-// ~~~
-// А внутри класса:
-// ~~~
-// constructor ({ userForm, popupObj, windowOne }) {...}
-// ~~~
-// И тогда порядок переменных будет неважен, это удобно
-
-// Исправьте критические замечания и присылайте

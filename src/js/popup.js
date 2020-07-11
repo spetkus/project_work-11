@@ -1,4 +1,4 @@
-class Popup {
+export default class Popup {
   constructor(popupElement, buttonClose) {
     this.popupElement = popupElement;
     this.buttonClose = buttonClose;

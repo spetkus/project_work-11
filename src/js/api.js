@@ -1,4 +1,4 @@
-class Api {
+export default class Api {
   constructor(options) {
     this.baseUrl = options.baseUrl;
     this.headers = options.headers;
@@ -62,10 +62,6 @@ class Api {
   }
 
   likeCard(id, isLiked) {
-    // Можно лучше
-    // method -- это не метод а флаг логический, лучше назвать его isLiked
-    // Но еще лучше -- разделить метод на два (likeCard/dislikeCard) -- функция должна выполнять одну задачу,
-    // а когда она выполняет ее явно для пользователя -- это вообще замечательно.
     (isLiked === true) ? this.method = 'DELETE' : this.method = 'PUT';
     return fetch(`${this.baseUrl}/cards/like/${id}`, {
       method: this.method,
